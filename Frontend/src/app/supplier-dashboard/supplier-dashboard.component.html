@@ -1,0 +1,26 @@
+<div class="sidenav">
+  </div>
+  <div class="content" style="margin-left: 20%; margin-top: 4%;">
+    <div class="right-container">                 
+        <table class="custom-table ">
+           
+          <tr class="">
+            <th>Order Id</th>
+            <th>Product Id</th>
+            <th>Order Quantity</th>
+            <th>Order Status</th>
+          </tr>
+          <tr *ngFor="let o of orderList">
+              <td id="td"  style="text-align: justify;">{{o.orderId}}</td>
+              <td id="td" style="text-align: justify;">{{o.productId}}</td>
+              <td id="td"  style="text-align: justify;">{{o.orderQuantity}}</td>
+              <td id="td"  style="text-align: justify;">{{o.orderStatus}}</td>
+              <td>
+                <!-- <button class="btn btn-success btn-sm" >Approve</button> -->
+                <button class="btn btn-warning btn-sm" style="padding-left: 40px; padding-right: 40px;" routerLink="/updateorderscomponent">Update Status</button>
+                <!-- <button class="btn btn-danger btn-sm" >Reject</button> -->
+            </td>
+          </tr>
+        </table>
+      </div>
+      </div>

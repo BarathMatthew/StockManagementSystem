@@ -1,0 +1,39 @@
+<div class="sidenav">
+  <a routerLink="/managedashboard">Dashboard</a>
+  <a routerLink="/manageuserscomponent">Users</a>
+  <a routerLink="/ordercomponent">Orders</a>
+  <a routerLink="/manageproductcomponent">Product</a>
+</div>
+<div class="content">
+  <div class="right-container">   
+    <div style="margin-left: 90%; margin-bottom: 3%;">            
+      <button class="btn btn-success" style="padding-left: 10px; padding-right: 10px;" routerLink="/insertproductcomponent">Insert Product</button></div>              
+      <table class="custom-table">
+         
+        <tr class="">
+          <th>Product Id</th>
+          <th>Product Name</th>
+          <th>Product Description</th>
+          <th>product Price</th>
+          <th>product Quantity</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+  
+        <tr *ngFor="let b of productList">
+            <td id="td" style="text-align: justify;">{{b.productId}}</td>
+            <td id="td"  style="text-align: justify;">{{b.productName}}</td>
+            <td id="td"  style="text-align: justify;">{{b.productDesc}}</td>
+            <td id="td"  style="text-align: justify;">{{b.productPrice}}</td>
+            <td id="td"  style="text-align: justify;">{{b.productQuantity}}</td>
+            <td>
+              <button class="btn btn-primary btn-sm" style="margin-right: 3%;" routerLink="/updateproductcomponent" >Edit</button>
+              <button class="btn btn-danger btn-sm" routerLink="/deleteproductcomponent">Delete</button>
+          </td>
+              
+        </tr>
+      </table>
+    </div>
+  
+    </div>

@@ -1,0 +1,38 @@
+<div class="sidenav">
+    <a routerLink="/managedashboard">Dashboard</a>
+    <a routerLink="/manageuserscomponent">Users</a>
+    <a routerLink="/ordercomponent">Orders</a>
+    <a routerLink="/manageproductcomponent">Product</a>
+  </div>
+  <div class="content">
+
+    <div class="right-container" style="margin-top: 3%; margin-left: 1%;">                 
+        <table class="custom-table">
+           
+          <tr class="">
+            <th>Order Id</th>
+            <th>Product Id</th>
+            <th>Supplier Id</th>
+            <th>Order Quantity</th>
+            <th>Order Status</th>
+            <th></th>
+            <th></th>
+          </tr>
+    
+          <tr *ngFor="let o of orderList">
+              <td id="td"  style="text-align: justify;">{{o.orderId}}</td>
+              <td id="td"  style="text-align: justify;">{{o.productId}}</td>
+              <td id="td"  style="text-align: justify;">{{o.userId}}</td>
+              <td id="td"  style="text-align: justify;">{{o.orderQuantity}}</td>
+              <td id="td"  style="text-align: justify;">{{o.orderStatus}}</td>
+              <!-- <td>
+                <button class="btn btn-primary btn-sm" >Edit</button>
+            </td>
+            <td>
+                <button class="btn btn-danger btn-sm" >Delete</button>
+            </td> -->
+          </tr>
+        </table>
+      </div>
+    
+</div>

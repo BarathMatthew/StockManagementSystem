@@ -1,0 +1,99 @@
+<div class="container register">
+
+    <div class="registerForm" style="margin-left: 30%; margin-top: 0.8%; border: 1px solid #ccc; padding: 20px; max-width: 450px;">
+
+        <form [formGroup]="myForm" id="myForm" (ngSubmit)="register(myForm.value)">
+
+            <div class="mb-3">
+                <label for="userId" style="display: block;">User ID :</label>
+                <input type="number" class="form-control" id="userId" formControlName="userId">
+                <div *ngIf="myForm.get('userId')!.touched && myForm.get('userId')!.invalid">
+                    <div *ngIf="myForm.get('userId')!.hasError('required')">
+                        <font color="red"><b>User ID is Required.</b></font>
+                    </div>
+                    <div *ngIf="myForm.get('userId')!.hasError('pattern')">
+                        <font color="red"><b>Invalid User ID</b></font>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="userName" style="display: block;">User Name :</label>
+                <input type="text" class="form-control" id="userName" formControlName="userName">
+                <div *ngIf="myForm.get('userName')!.touched && myForm.get('userName')!.invalid">
+                    <div *ngIf="myForm.get('userName')!.hasError('required')">
+                        <font color="red"><b>User Name is Required.</b></font>
+                    </div>
+                    <div *ngIf="myForm.get('userName')!.hasError('pattern')">
+                        <font color="red"><b>Invalid User Name</b></font>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="mobileNumber" style="display: block;">Mobile Number :</label>
+                <input type="text" class="form-control" id="mobileNumber" formControlName="mobileNumber">
+                <div *ngIf="myForm.get('mobileNumber')!.touched && myForm.get('mobileNumber')!.invalid">
+                    <div *ngIf="myForm.get('mobileNumber')!.hasError('required')">
+                        <font color="red"><b>Mobile Number is Required.</b></font>
+                    </div>
+                    <div *ngIf="myForm.get('mobileNumber')!.hasError('pattern')">
+                        <font color="red"><b>Invalid User Mobile Number</b></font>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="emailId" style="display: block;">Email Id :</label>
+                <input type="text" class="form-control" id="emailId" formControlName="emailId">
+                <div *ngIf="myForm.get('emailId')!.touched && myForm.get('emailId')!.invalid">
+                    <div *ngIf="myForm.get('emailId')!.hasError('required')">
+                        <font color="red"><b>Email Id is Required.</b></font>
+                    </div>
+                    <!-- <div *ngIf="myForm.get('emailId')!.hasError('pattern')">
+                        <font color="red"><b>Invalid User emailId</b></font>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" style="display: block;">Password :</label>
+                <input type="password" class="form-control" id="password" formControlName="password">
+                <div *ngIf="myForm.get('password')!.touched && myForm.get('password')!.invalid">
+                    <div *ngIf="myForm.get('password')!.hasError('required')">
+                        <font color="red"><b>password is Required.</b></font>
+                    </div>
+                    <div *ngIf="myForm.get('password')!.hasError('pattern')">
+                        <font color="red"><b>Invalid User password</b></font>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="userType" style="display: block;">User Type :</label>
+                <select class="form-control" id="userType" formControlName="userType">
+                    <option value="supplier">Supplier</option>
+                    <option value="customer">Customer</option>
+
+                </select>
+            </div>
+            <!-- <div class="mb-3">
+                <label for="userType" style="display: block;">User Type :</label>
+                <input type="text" class="form-control" id="userType" formControlName="userType">
+                <div *ngIf="myForm.get('userType')!.touched && myForm.get('userType')!.invalid">
+                    <div *ngIf="myForm.get('userType')!.hasError('required')">
+                        <font color="red"><b>User Type is Required.</b></font>
+                    </div>
+                    <div *ngIf="myForm.get('userType')!.hasError('pattern')">
+                        <font color="red"><b>Invalid User Name</b></font>
+                    </div>
+                </div>
+            </div> -->
+            <button type="button" class="btn btn-success" style="margin-right: 3%;" (click)="UpdateUser(myForm.value)" >Update</button>
+            <button type="reset" class="btn btn-secondary" style="margin-right: 3%;">Reset</button>
+            <button type="buttom" class="btn btn-danger" routerLink="/manageuserscomponent">Back</button>
+        </form>
+
+        <font id="result"><b>{{result}}</b></font>
+    </div>
+</div>

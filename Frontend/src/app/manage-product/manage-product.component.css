@@ -1,0 +1,81 @@
+.menu-items{
+    order: 2;
+    display: flex;
+  }
+  .menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .sidenav {
+    background-color: #007bff;
+    margin-top: 4.2%;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    border: 2px solid #007bff;
+  }
+  
+  .sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: black;
+  }
+  
+  .sidenav a:hover {
+    background-color: #495057;
+    color: #fff;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #495057;
+  }
+  
+  p {
+    color: #6c757d;
+  }
+
+
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .custom-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: #f0f0f0;
+  }

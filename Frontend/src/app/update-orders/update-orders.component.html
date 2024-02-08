@@ -1,0 +1,89 @@
+<div class="container register">
+
+    <div class="registerForm" style="margin-left: 30%; margin-top: 0.8%; border: 1px solid #ccc; padding: 20px; max-width: 450px;">
+
+        <form [formGroup]="myForm" id="myForm" (ngSubmit)="UpdateOrder(myForm.value)">
+
+            <div class="mb-3">
+                <label for="orderId" style="display: block;">Order ID :</label>
+                <input type="number" class="form-control" id="orderId" formControlName="orderId">
+                <div *ngIf="myForm.get('orderId')!.touched && myForm.get('productId')!.invalid">
+                    <div *ngIf="myForm.get('orderId')!.hasError('required')">
+                        <font color="red"><b>order ID is Required.</b></font>
+                    </div>
+                    <!-- <div *ngIf="myForm.get('productId')!.hasError('pattern')">
+                        <font color="red"><b>Invalid product ID</b></font>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="productId" style="display: block;">Product ID :</label>
+                <input type="number" class="form-control" id="productId" formControlName="productId">
+                <div *ngIf="myForm.get('productId')!.touched && myForm.get('productId')!.invalid">
+                    <div *ngIf="myForm.get('productId')!.hasError('required')">
+                        <font color="red"><b>order ID is Required.</b></font>
+                    </div>
+                    <!-- <div *ngIf="myForm.get('productId')!.hasError('pattern')">
+                        <font color="red"><b>Invalid product ID</b></font>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="userId" style="display: block;">User ID :</label>
+                <input type="number" class="form-control" id="userId" formControlName="userId">
+                <div *ngIf="myForm.get('userId')!.touched && myForm.get('userId')!.invalid">
+                    <div *ngIf="myForm.get('userId')!.hasError('required')">
+                        <font color="red"><b>order ID is Required.</b></font>
+                    </div>
+                    <!-- <div *ngIf="myForm.get('productId')!.hasError('pattern')">
+                        <font color="red"><b>Invalid product ID</b></font>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="orderQuantity" style="display: block;">Order Quantity :</label>
+                <input type="number" class="form-control" id="orderQuantity" formControlName="orderQuantity">
+                <div *ngIf="myForm.get('orderQuantity')!.touched && myForm.get('orderQuantity')!.invalid">
+                    <div *ngIf="myForm.get('orderQuantity')!.hasError('required')">
+                        <font color="red"><b>order ID is Required.</b></font>
+                    </div>
+                    <!-- <div *ngIf="myForm.get('productId')!.hasError('pattern')">
+                        <font color="red"><b>Invalid product ID</b></font>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="orderStatus" style="display: block;">Order Status :</label>
+                <select class="form-control" id="userType" formControlName="orderStatus">
+                    <option value="Approve">Approve</option>
+                    <option value="Reject">Reject</option>
+                    <option value="Pending">Pending</option>
+                </select>
+            </div>
+
+            <!-- <div class="mb-3">
+                <label for="productQuantity" style="display: block;">product Quantity :</label>
+                <input type="text" class="form-control" id="productQuantity" formControlName="productQuantity">
+                <div *ngIf="myForm.get('productQuantity')!.touched && myForm.get('productQuantity')!.invalid">
+                    <div *ngIf="myForm.get('productQuantity')!.hasError('required')">
+                        <font color="red"><b>product quantity is Required.</b></font>
+                    </div>
+                    <div *ngIf="myForm.get('productQuantity')!.hasError('pattern')">
+                        <font color="red"><b>Invalid product quantity</b></font>
+                    </div>
+                </div>
+            </div> -->
+
+            <button type="button" class="btn btn-success" style="margin-right: 3%;" (click)="UpdateOrder(myForm.value)">Update Status</button>
+            <button type="reset" class="btn btn-secondary" style="margin-right: 3%;">Reset</button>
+            <button  class="btn btn-danger" routerLink="/supplierdashboardcomponent">back</button>
+
+        </form>
+
+        <font id="result"><b>{{result}}</b></font>
+    </div>
+</div>

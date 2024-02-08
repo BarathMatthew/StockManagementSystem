@@ -1,0 +1,51 @@
+<div style="margin-left: 90%; margin-top: 3%;">
+  <button class="btn btn-warning" routerLink="/inserteorderscomponent">Place Order</button>
+</div>
+
+<div class="sidenav">
+  <a routerLink="/managedashboard">Dashboard</a>
+  <a routerLink="/manageuserscomponent">Users</a>
+  <a routerLink="/ordercomponent">Orders</a>
+  <a routerLink="/manageproductcomponent">Product</a>
+</div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Product Id Card -->
+      <div class="col-lg-4">
+        <div class="card bg-primary text-white mb-3">
+          <div class="card-header"><h3 class="card-title">Product Id</h3></div>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <li *ngFor="let p of productList">{{ p.productId }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total Product Card -->
+      <div class="col-lg-4">
+        <div class="card bg-success text-white mb-3">
+          <div class="card-header"><h3 class="card-title">Total Product</h3></div>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <li *ngFor="let p of productList">{{ p.productName }}: {{ p.productQuantity }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selling Price Card -->
+      <div class="col-lg-4">
+        <div class="card bg-danger text-white mb-3">
+          <div class="card-header"><h3 class="card-title">Selling Price</h3></div>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <li *ngFor="let p of productList">{{ p.productPrice }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

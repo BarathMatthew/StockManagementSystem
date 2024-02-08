@@ -1,0 +1,91 @@
+.menu-items{
+    order: 2;
+    display: flex;
+  }
+  .menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .sidenav {
+    background-color: #007bff;
+    margin-top: 4.2%;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    border: 2px solid #007bff;
+  }
+  
+  .sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: black;
+  }
+  
+  .sidenav a:hover {
+    background-color: #495057;
+    color: #fff;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #495057;
+  }
+  
+  p {
+    color: #141515;
+  }
+
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  ul.list-unstyled {
+    padding-left: 0;
+  }
+  
+  ul li {
+    list-style: none;
+    padding: 5px 0;
+  }
+  
+  /* Customize colors for different card types */
+  .card.bg-primary {
+    background-color: #6278e8;
+  }
+  
+  .card.bg-success {
+    background-color: #adf0c8;
+  }
+  
+  .card.bg-danger {
+    background-color: #db7676;
+  }
+  

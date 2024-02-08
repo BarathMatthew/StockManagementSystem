@@ -1,0 +1,41 @@
+<div class="sidenav">
+    <a routerLink="/managedashboard">Dashboard</a>
+    <a routerLink="/manageuserscomponent">Users</a>
+    <a routerLink="/ordercomponent">Orders</a>
+    <a routerLink="/manageproductcomponent">Product</a>
+  </div>
+  <div class="content">
+    <div class="right-container" style="margin-left: 10%;">   
+        <div style="margin-left: 90%; margin-bottom: 3%;">            
+          <button class="btn btn-success" style="padding-left: 10px; padding-right: 10px;" routerLink="/insertusercomponent">Add Users</button></div>              
+          <table class="custom-table">
+             
+            <tr class="">
+              <th>User Id</th>
+              <th>User Name</th>
+              <th>User Type</th>
+              <th>Mobile Number</th>
+              <th>email Id</th>
+              <th>password</th>
+              <th></th>
+              <th></th>
+            </tr>
+      
+            <tr *ngFor="let b of userList">
+                <td id="td" style="text-align: justify;">{{b.userId}}</td>
+                <td id="td"  style="text-align: justify;">{{b.userName}}</td>
+                <td id="td"  style="text-align: justify;">{{b.userType}}</td>
+                <td id="td"  style="text-align: justify;">{{b.mobileNumber}}</td>
+                <td id="td"  style="text-align: justify;">{{b.emailId}}</td>
+                <td id="td"  style="text-align: justify;">{{b.password}}</td>
+                <td>
+                  <button class="btn btn-primary btn-sm" style="margin-right: 3%;" routerLink="/updateusercomponent">Edit</button>
+                  <button class="btn btn-danger btn-sm" routerLink="/deleteproductcomponent">Delete</button>
+              </td>
+                  
+            </tr>
+          </table>
+        </div>
+      
+      </div>
+
