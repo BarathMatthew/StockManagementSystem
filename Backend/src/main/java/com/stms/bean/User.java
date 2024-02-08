@@ -35,12 +35,8 @@ public class User {
     @Column(name="userType")
     private String userType;
 
-//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-//    private List<Address> addresses = new ArrayList<>();
-
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public User(Long userId, String userName, Long mobileNumber, String emailId, String password, String userType) {
