@@ -33,13 +33,5 @@ public class UserService {
         return userList;
     }
     
-//    public List<User> getAllSuppliers(String userType) {
-//        Iterator<User> iterator = userDao.findByUserType("supplier").iterator();
-//        List<User> supplierList = new ArrayList<>();
-//        while (iterator.hasNext()) {
-//            supplierList.add(iterator.next());
-//        }
-//        return supplierList;
-//    }
 }
 

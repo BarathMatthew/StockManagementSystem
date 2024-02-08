@@ -31,7 +31,6 @@ public class Product {
 
 	public Product() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Product(Long productId, String productName, String productDesc, double productPrice,

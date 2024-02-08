@@ -33,8 +33,4 @@ public class UserController {
         return userService.getAllUsers();
     }
     
-//    @GetMapping("/findAllsupplier/{userType}")
-//    public List<User> viewAllUsers(@PathVariable String userType) {
-//        return userService.getAllSuppliers(userType);
-//    }
 }

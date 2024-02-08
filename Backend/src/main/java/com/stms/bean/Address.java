@@ -35,7 +35,6 @@ public class Address {
 
 	public Address() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Address(User user, Integer doorNo, String street, String city, Integer pincode) {
